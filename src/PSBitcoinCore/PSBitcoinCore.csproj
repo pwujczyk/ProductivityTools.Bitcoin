@@ -66,10 +66,11 @@
   <ItemGroup>
     <Compile Include="AutoMapperConfiguration.cs" />
     <Compile Include="BitcoinDataSet.cs" />
-    <Compile Include="Core.cs" />
+    <Compile Include="Slides\PrivateKey.cs" />
     <Compile Include="LargeNumberOperations.cs" />
     <Compile Include="PrivateKeyTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Slides\PublicKey.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -80,5 +81,6 @@
       <Name>BitcoinSimpleClientObjects</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

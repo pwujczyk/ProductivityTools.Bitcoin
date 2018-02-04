@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BitcoinSimpleClientObjects;
 using NBitcoin;
+using PSBitcoinClientCore;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,9 +10,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PSBitcoinClientCore
+namespace PSBitcoinCore
 {
-    public class Core
+    public partial class Core
     {
         IMapper Mapper = new Mapper(AutoMapperConfiguration.Configuration);
 
@@ -31,44 +32,6 @@ namespace PSBitcoinClientCore
             result.Binary = PrivateKeyTools.GetPrivateBinaryKey(key);
             return result;
         }
-
-        //public void xx()
-        //{
-        //    GeneratePrivateKey(Network.TestNet);
-
-        //    xx(Network.TestNet);
-        //}
-
-        //public void xx(Network network)
-        //{
-        //    string WIF = GenerateNewPrivateKeyAndGetWIF(network);
-        //    var b1 = GenerateNewDataSet(network, WIF);
-        //    Write(b1);
-        //    var b2 = GenerateNewDataSet(network, WIF);
-        //    Write(b2);
-        //    var b4 = GenerateNewDataSet(network, WIF);
-        //    Write(b4);
-        //}
-
-        //public void Write(BitcoinDataSet b)
-        //{
-        //    Console.WriteLine(b.ToString());
-
-        //}
-
-        //public string GenerateNewPrivateKeyAndGetWIF()
-        //{
-        //    return GenerateNewPrivateKeyAndGetWIF(Network.TestNet);
-        ////}
-
-        //public string GenerateNewPrivateKeyAndGetWIF(Network network)
-        //{
-        //    Key privateKey = new Key();
-        //    var wif = privateKey.GetWif(network);
-        //    return wif.ToString();
-
-        //}
-
 
         private static BitcoinDataSet GenerateNewDataSet(NBitcoin.Network network, string wif)
         {

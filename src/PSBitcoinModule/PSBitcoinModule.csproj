@@ -45,8 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseCmdlet.cs" />
-    <Compile Include="GeneratePrivateKey.cs" />
-    <Compile Include="GenerateWif.cs" />
+    <Compile Include="PrivateKey\GeneratePrivateKey.cs" />
+    <Compile Include="PrivateKey\GenerateWif.cs" />
+    <Compile Include="PublicKey\GetAddressFromPublicKey.cs" />
+    <Compile Include="PublicKey\GetPublicKeyFromPrivate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

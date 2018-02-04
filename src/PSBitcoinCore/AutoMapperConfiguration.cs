@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PSBitcoinClientCore
+namespace PSBitcoinCore
 {
     public static class AutoMapperConfiguration
     {
