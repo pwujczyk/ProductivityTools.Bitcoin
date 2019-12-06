@@ -1,0 +1,7 @@
+﻿CREATE TABLE [btt].[WaletImportFile]
+(
+    WifId INT IDENTITY(1,1),
+    Wif VARCHAR(52),
+    Name VARCHAR(20),
+    CONSTRAINT PK_WIF_WifID PRIMARY KEY CLUSTERED (WifId)
+)

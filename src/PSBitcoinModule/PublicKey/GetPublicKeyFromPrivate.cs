@@ -12,8 +12,7 @@ namespace PSBitcoinModule
     [Cmdlet("GetPublicKey", "FromPrivate")]
     public class GetPublicKeyFromPrivate : BaseCmdlet
     {
-
-        [Parameter]
+        [Parameter(ValueFromPipeline =true)]
         public string WIF { get; set; }
 
         protected override void BeginProcessing()

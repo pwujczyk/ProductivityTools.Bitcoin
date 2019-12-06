@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BTCTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="dbUp">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ScriptName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Applied" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WaletImportFile">
+          <Key>
+            <PropertyRef Name="WifId" />
+          </Key>
+          <Property Name="WifId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Wif" Type="varchar" MaxLength="20" />
+          <Property Name="Name" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="BTCTestModelStoreContainer">
+          <EntitySet Name="dbUp" EntityType="Self.dbUp" Schema="btt" store:Type="Tables" />
+          <EntitySet Name="WaletImportFile" EntityType="Self.WaletImportFile" Schema="btt" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BTCTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BTCEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="dbUp" EntityType="BTCTestModel.dbUp" />
+          <EntitySet Name="WaletImportFile" EntityType="BTCTestModel.WaletImportFile" />
+        </EntityContainer>
+        <EntityType Name="dbUp">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ScriptName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Applied" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="WaletImportFile">
+          <Key>
+            <PropertyRef Name="WifId" />
+          </Key>
+          <Property Name="WifId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Wif" Type="String" MaxLength="52" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BTCTestModelStoreContainer" CdmEntityContainer="BTCEntities">
+          <EntitySetMapping Name="dbUp">
+            <EntityTypeMapping TypeName="BTCTestModel.dbUp">
+              <MappingFragment StoreEntitySet="dbUp">
+                <ScalarProperty Name="Applied" ColumnName="Applied" />
+                <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WaletImportFile">
+            <EntityTypeMapping TypeName="BTCTestModel.WaletImportFile">
+              <MappingFragment StoreEntitySet="WaletImportFile">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Wif" ColumnName="Wif" />
+                <ScalarProperty Name="WifId" ColumnName="WifId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

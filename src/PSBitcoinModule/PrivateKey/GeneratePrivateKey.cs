@@ -13,9 +13,6 @@ namespace BitcoinSimpleClientPSModule
     [Cmdlet("Generate", "PrivateKey")]
     public class GeneratePrivateKey : BaseCmdlet
     {
-        //[Parameter(Mandatory = true, Position = 0, HelpMessage = "TestNet or Main Bitcoin Network")]
-        //public Network NetworkType { get; set; }
-
         [Parameter(Mandatory = true, Position = 0, HelpMessage = "TestNet or Main Bitcoin Network")]
         public Network NetworkType { get; set; }
 

@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using BitcoinSimpleClientObjects;
 using NBitcoin;
-using PSBitcoinClientCore;
-using PSBitcoinDB;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,26 +9,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PSBitcoinCore
+namespace PSBitcoinClientCore
 {
-    public partial class Core
+    public class Core
     {
         IMapper Mapper = new Mapper(AutoMapperConfiguration.Configuration);
-
-        BTCEntities entities;
-        BTCEntities Entities
-        {
-            get
-            {
-                if (entities==null)
-                {
-                    var conn=ConnectionStringHelper.ConnectionString.GetSqlEntityFrameworkConnectionString(@".\sql2014", "BTCTest", "BitcoinDB");
-                    entities = new BTCEntities(conn);
-                }
-                return entities;
-            }
-        }
-
 
         public string GenerateWIF(BitcoinSimpleClientObjects.Network network)
         {
@@ -49,6 +32,44 @@ namespace PSBitcoinCore
             return result;
         }
 
+        //public void xx()
+        //{
+        //    GeneratePrivateKey(Network.TestNet);
+
+        //    xx(Network.TestNet);
+        //}
+
+        //public void xx(Network network)
+        //{
+        //    string WIF = GenerateNewPrivateKeyAndGetWIF(network);
+        //    var b1 = GenerateNewDataSet(network, WIF);
+        //    Write(b1);
+        //    var b2 = GenerateNewDataSet(network, WIF);
+        //    Write(b2);
+        //    var b4 = GenerateNewDataSet(network, WIF);
+        //    Write(b4);
+        //}
+
+        //public void Write(BitcoinDataSet b)
+        //{
+        //    Console.WriteLine(b.ToString());
+
+        //}
+
+        //public string GenerateNewPrivateKeyAndGetWIF()
+        //{
+        //    return GenerateNewPrivateKeyAndGetWIF(Network.TestNet);
+        ////}
+
+        //public string GenerateNewPrivateKeyAndGetWIF(Network network)
+        //{
+        //    Key privateKey = new Key();
+        //    var wif = privateKey.GetWif(network);
+        //    return wif.ToString();
+
+        //}
+
+
         private static BitcoinDataSet GenerateNewDataSet(NBitcoin.Network network, string wif)
         {
             BitcoinSecret privateKey = new BitcoinSecret(wif);
@@ -59,16 +80,6 @@ namespace PSBitcoinCore
             btds.Address = privateKey.PubKey.GetAddress(network).ToString();
             btds.ScriptPubKey = privateKey.PubKey.GetAddress(network).ScriptPubKey.ToString();
             return btds;
-        }
-
-
-        public void  SaveWifToDB(string wif, string name)
-        {
-            WaletImportFile wifdb = new WaletImportFile();
-            wifdb.Name = name;
-            wifdb.Wif = wif;
-            Entities.WaletImportFile.Add(wifdb);
-            Entities.SaveChanges();
         }
     }
 }
