@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "src\Runner\Runner.csproj", "{35D2F2E1-3FA6-4B57-ADB5-4AD84DE53E26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSBitcoinCore", "src\PSBitcoinCore\PSBitcoinCore.csproj", "{2423A6FE-D387-4B01-AA90-D096B6829300}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.BitcoinCore", "src\PSBitcoinCore\ProductivityTools.BitcoinCore.csproj", "{2423A6FE-D387-4B01-AA90-D096B6829300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSBitcoinModule", "src\PSBitcoinModule\PSBitcoinModule.csproj", "{77CF9FAC-7B38-4580-94CA-AFB9C6104901}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.BitcoinModule", "src\PSBitcoinModule\ProductivityTools.BitcoinModule.csproj", "{77CF9FAC-7B38-4580-94CA-AFB9C6104901}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSBitcoinObjects", "src\PSBitcoinObjects\PSBitcoinObjects.csproj", "{9A2C8D38-42DC-4E86-A42E-0F7971913B25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.BitcoinObjects", "src\PSBitcoinObjects\ProductivityTools.BitcoinObjects.csproj", "{9A2C8D38-42DC-4E86-A42E-0F7971913B25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSBitcoinDBScripts", "PSBitcoinDBScripts\PSBitcoinDBScripts.csproj", "{20D2595F-6B30-47ED-9656-AE8EB732A3E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.BitcoinDBScripts", "PSBitcoinDBScripts\ProductivityTools.BitcoinDBScripts.csproj", "{20D2595F-6B30-47ED-9656-AE8EB732A3E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSBitcoinDB", "PSBitcoinDB\PSBitcoinDB.csproj", "{77EAD019-A5A2-428D-B990-1E23BF1DEB0F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.BitcoinDB", "PSBitcoinDB\ProductivityTools.BitcoinDB.csproj", "{77EAD019-A5A2-428D-B990-1E23BF1DEB0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

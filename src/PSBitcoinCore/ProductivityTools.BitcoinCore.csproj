@@ -86,13 +86,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\PSBitcoinDB\PSBitcoinDB.csproj">
+    <ProjectReference Include="..\..\PSBitcoinDB\ProductivityTools.BitcoinDB.csproj">
       <Project>{77ead019-a5a2-428d-b990-1e23bf1deb0f}</Project>
-      <Name>PSBitcoinDB</Name>
+      <Name>ProductivityTools.BitcoinDB</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PSBitcoinObjects\PSBitcoinObjects.csproj">
+    <ProjectReference Include="..\PSBitcoinObjects\ProductivityTools.BitcoinObjects.csproj">
       <Project>{9a2c8d38-42dc-4e86-a42e-0f7971913b25}</Project>
-      <Name>BitcoinSimpleClientObjects</Name>
+      <Name>ProductivityTools.BitcoinObjects</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

@@ -48,9 +48,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PSBitcoinCore\PSBitcoinCore.csproj">
+    <ProjectReference Include="..\PSBitcoinCore\ProductivityTools.BitcoinCore.csproj">
       <Project>{2423a6fe-d387-4b01-aa90-d096b6829300}</Project>
-      <Name>PSBitcoinCore</Name>
+      <Name>ProductivityTools.BitcoinCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
